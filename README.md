@@ -4,7 +4,7 @@ Katasztrófa és veszélyjelző alkalmazás
 
 Katasztrófa helyzetek helyszíni megjelölésére, illetve figyelmeztetések kiadására alkalmas program.
 
-###Támogatott funkciók
+### Támogatott funkciók
 - Közelben történő veszélyhelyzet esetén automatikus figyelmeztetés mobil eszközön
 - Eset bejelentése
 - Legfontosabb hatósági intézkedések megjelenítése
