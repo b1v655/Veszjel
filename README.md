@@ -10,3 +10,8 @@ Katasztrófa helyzetek helyszíni megjelölésére, illetve figyelmeztetések ki
 - Legfontosabb hatósági intézkedések megjelenítése
 - Veszélyhelyzettel kapcsolatos hírek megjelenítése
 
+### Kinézet
+
+![Figyelmeztetés környéken](./design/Figyelmeztetes.png) 
+
+![Hírek veszélyhelyzetekről](./design/hirek.png) 
