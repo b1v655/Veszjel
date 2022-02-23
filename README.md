@@ -10,7 +10,7 @@ Katasztrófa helyzetek helyszíni megjelölésére, illetve figyelmeztetések ki
 - Legfontosabb hatósági intézkedések megjelenítése
 - Veszélyhelyzettel kapcsolatos hírek megjelenítése
 
-### Feléületi terv
+### Felületi terv
 
 ![Figyelmeztetés környéken](./design/Figyelmeztetes.png) 
 
