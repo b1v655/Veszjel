@@ -1,4 +1,4 @@
-# Veszjel
+# Veszély jelző alkalmazás
 Katasztrófa és veszélyjelző alkalmazás
 ## Leírás
 
