@@ -29,7 +29,9 @@ kliens: Android 4.0.3+
 A szerver reactJS nyelven íródott futtatásához az alábbi függőségek telepítése elengedhetetlen.
 
 [nodejs 12+](https://nodejs.org/en/download/)
+
 [npm 5.5+](https://docs.npmjs.com/cli/v8/commands/npm-install)
+
 [expo-cli](https://docs.expo.dev/get-started/installation/)
 
 ### kliens függőségei
