@@ -74,3 +74,9 @@ yarn install
 yarn start
 ```
 ## Használati útmutató
+
+### Diszpécser applikáció
+
+Az alkalmazás felülete szemkímélő és színválasztéka is kellemes. Az alkalmazáson belül hibajegyet tudunk feladni, amely az adatbázisba köszvetlen továbbításra kerül a szerver segítségével.
+
+A szövegdobozokat az alábbi értelmezésen keresztül kell kitölteni:
