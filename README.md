@@ -79,4 +79,15 @@ yarn start
 
 Az alkalmazás felülete szemkímélő és színválasztéka is kellemes. Az alkalmazáson belül hibajegyet tudunk feladni, amely az adatbázisba köszvetlen továbbításra kerül a szerver segítségével.
 
+#### Hibajegy felvétele
+
 A szövegdobozokat az alábbi értelmezésen keresztül kell kitölteni:
+ - **helyszín**: Két adatot igényel hosszúsági és szélességi fok.
+ - **Zóna**: Sugár amelyen belül a veszélyjelzés érvényes kilométer pontosan.
+ - **Helységmegnevezés**: Belterület, ahol a katasztrófa történt.
+ - **Veszély típus**: Veszély típusának megnevezése.
+ - **Riasztási szint**: A katasztrófa súlyosságának besorolási szintje.
+ - **Üzenetcím**: A riasztás megnevezése.
+ - **Leírás**: A katasztrófa körülményeinek leírása, és lakosság felszólítása cselekvésekre.
+
+![](images/Screenshot.png) 
