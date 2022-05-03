@@ -21,7 +21,7 @@ Katasztrófa helyzetek helyszíni megjelölésére, illetve figyelmeztetések ki
 
 ### operációs rendszer
 
-szerver: Ubuntu 21.04 LTS
+szerver: Ubuntu 20.04 LTS
 kliens: Android 4.0.3+
 
 ### Szerver függőségei
@@ -40,3 +40,37 @@ Az alkalmazás android operációs rendszerre lett optimalizálva expo go körny
 
 [Expo Go 2.19.6](https://expo.dev/client) 
 
+### Diszpécser szerver függőségei
+
+A diszpécser applikáció webböngészőn keresztül érhető el, a szerver futtatásához nodejs szükséges.
+[nodejs 12+](https://nodejs.org/en/download/)
+
+
+## implementáció
+
+Az implementáció teljes egésze javascript illetve html nyelven történik. Különböző nyilvános keretrendszerek kerültek felhasználásra.
+
+### Használt technológiák
+
+React Native: egy nyílt forrású mobil applikációs keretrendszer ami a Facebook által lett készítve. Ennek segítségével Android, iOS, macOS, Web, Windows operációs rendszerekre vagyun képesek fejleszteni alkalmazásokat és lehetővé teszi a fejlesztőknek hogy React keretrendszert használjanak a natív platform képességeivel.
+
+Expo: egy keretrendszer és egy egy platform univerzális React alkalmazásokhoz. Előnye hogy könnyű tesztelni éles eszközök, hisz egyből a saját eszközünkön jelenik meg az általunk megírt alkalmazás.
+
+NodeJS: A Node.js egy szoftverrendszer, melyet skálázható internetes alkalmazások, mégpedig webszerverek készítésére hoztak létre. A programok JavaScript-ben írhatók, eseményalapú, aszinkron I/O-val a túlterhelés minimalizálására és a skálázhatóság maximalizálására.
+
+### Futtatás
+
+Diszpécser futtatása: 
+A szerver 3000-es porton futtatható alapértelmezett esetben. Ekkor a http://localhost:3000/ oldalon webböngészőn keresztül elérhető.
+```bash
+node server.js
+```
+
+Applikáció rendszer futtatása:
+A függőségek telepítéséhez futtassuk az install parancsot. Ezután a start paranccsal indítható az alkalmazás.
+A szerver 19000-es porton futtatható alapértelmezett esetben. Ekkor az expo appon keresztül elérhető.
+```bash
+yarn install
+yarn start
+```
+## Használati útmutató
