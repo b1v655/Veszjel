@@ -90,4 +90,4 @@ A szövegdobozokat az alábbi értelmezésen keresztül kell kitölteni:
  - **Üzenetcím**: A riasztás megnevezése.
  - **Leírás**: A katasztrófa körülményeinek leírása, és lakosság felszólítása cselekvésekre.
 
-![](images/Screenshot.png) 
+![](Screenshot.png) 
