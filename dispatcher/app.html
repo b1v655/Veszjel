@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta name="description" content="Dispatcher site" />
+  <meta charset="utf-8">
+  <title>Dispatcher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="">
+  <style>
+    html {
+	background-color:lightgreen;
+	min-width:600px;
+	background-repeat:repeat;
+    }
+    body {
+        font-family: arial, verdana, sans-serif;	
+        background-color:lightgoldenrodyellow;
+        width:60%;
+        padding:20px; 
+        margin:20px auto;
+        border:2px solid black;
+        border-radius:20px;
+     }
+    .footer p{
+        text-align:center;
+    }
+    .main{
+        margin: 5%;
+    }
+    .header_nav{
+        background-color:lightgray;
+        padding:5px;
+        border-top:1px solid black;
+        border-bottom:1px solid black; 
+        margin-left:-20px;
+        margin-right:-20px;
+    }
+
+    .header_nav_ul_li{
+        display:inline;
+    }
+    .header_nav_a{
+        text-decoration:none; 
+        font-size:1.5em;
+        font-variant:small-caps;
+        margin-right:1em;
+        
+    }
+    .header_nav#betutipus{
+        font-size:0.7em;
+        float:right;
+        width:210px;
+        border:1px solid black;
+        margin-left:10px;
+        margin-bottom:10px;
+    }
+
+    .header_nav_a#normalbetu{
+        position:absolute;
+        left:-9999px;
+    }
+
+    header nav {
+        background-color:lightgray;
+        padding:5px;
+        border-top:1px solid black;
+        border-bottom:1px solid black; 
+        margin-left:-20px;
+        margin-right:-20px;
+
+    }
+
+    header nav ul li {
+        display:inline;
+
+    }
+
+    header nav a{
+        text-decoration:none; 
+        font-size:1.5em;
+        font-variant:small-caps;
+        margin-right:1em;
+        
+    }
+    nav#betutipus{
+        font-size:0.7em;
+        float:right;
+        width:210px;
+        border:1px solid black;
+        margin-left:10px;
+        margin-bottom:10px;
+        }
+
+    h1 {
+        text-align: center;
+        font-size: 3em;
+        font-variant: small-caps;
+        letter-spacing: 2px;
+        text-shadow: gray 3px 3px 3px;
+    }
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+
+        font-size: 1.5em;
+        text-indent: 2em;
+    }
+
+    figcaption {
+        text-align:left;
+        font-weight:bold;
+        font-size: 1em;
+    }
+
+    p {
+        text-align:justify;
+        line-height:1.5em;
+    }
+
+    img,video {
+        width:100%;
+        height:auto;
+    }
+
+    /* táblázat beállításai */
+
+    th {
+        text-align:left;
+    }
+    table {
+        width:300px;
+        background-color:lightblue;
+        border-collapse:collapse;
+        
+    }
+    table caption {
+        width:300px;
+        background-color:lightblue;
+    }
+    th,td,caption {
+        border:1px solid gray
+    }
+
+    /* szerkezeti elemek */
+    aside {
+        margin-left:10px;
+        margin-right:10px;
+        margin-bottom:10px;
+        margin-top:10px; 
+    }
+
+    footer p{
+        text-align:center;
+    }
+
+    hr {
+        border:0;
+        border-bottom:1px dotted gray;
+    }
+
+    fieldset {
+        background-color: lightyellow;
+        border-radius: 10px;
+    }
+
+    main{
+        margin: 5%;
+    }
+
+    article section {
+        max-width: 640px;
+        min-width: 240px;
+    }
+
+    article figure{
+        width: 240px;
+        margin: 0;
+        border: 0;
+    }
+    nav a#normalbetu{
+        position:absolute;
+        left:-9999px;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script>
+    function checkTypes(){
+        let error = false;
+        if(isNaN( document.getElementById("hszin_lat").value ) ||
+        isNaN(document.getElementById("hszin_long").value )  ||
+        isNaN( document.getElementById("rszint").value )||
+        isNaN(document.getElementById("zona").value )){
+            error=true;
+        } console.log(error );
+       
+        return error;
+    }
+    function send()  {
+        if(checkTypes()) return;
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:3000/");
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onload = () => console.log(xhr.responseText);
+        let toJson=  '{"longitude": ' +  document.getElementById("hszin_long").value + ', ' +
+        '"latitude": ' +document.getElementById("hszin_lat").value + ', ' +
+        '"dangertype": "' +document.getElementById("vtip").value + '", ' +
+        '"dangerzone": ' +document.getElementById("zona").value + ', ' +
+        '"place": "' +document.getElementById("hely").value + '", ' +
+        '"dangervalue": ' +document.getElementById("rszint").value + ', ' +
+        '"title": "' +document.getElementById("cim").value + '", ' +
+        '"description": "' +document.getElementById("leir").value + '"}';
+        xhr.send(toJson);
+    }
+</script>
+</head>
+
+<body>
+  <h1>
+      Veszjel diszpécser
+  </h1>
+<h2>Hibajegy felvétele</h2>
+<form>
+
+    <label ><p>Helyszín:</p></label>
+
+    <table>
+        <tr>
+        <th><label for="hszin_long"><p>hosszúság:</p></label></th>
+        <th><label for="hszin_lat"><p>szélesség:</p></label></th>
+        </tr>
+        <tr>
+        <td><input type="text" id="hszin_long" name="hszin_long"></td>
+        <td><input type="text" id="hszin_lat" name="hszin_lat"></td>
+        </tr>
+    </table> 
+
+    <label for="vtip"><p>Veszély típus</p></label>
+    <input type="text" id="vtip" name="vtip">
+
+    <label for="vtip"><p>Zóna</p></label>
+    <input type="text" id="zona" name="zona">
+
+    <label for="vtip"><p>Helységmegnevezés:</p></label>
+    <input type="text" id="hely" name="hely">
+
+    <label for="rszint"><p>Riasztási szint</p></label>
+    <input type="text" id="rszint" name="rszint">
+
+
+    <label for="cim"><p>Üzenetcím</p></label>
+    <input type="text" id="cim" name="cim">
+
+
+    <label for="leir"><p>Leírás</p></label>
+    <textarea id="leir" name="leir" rows="4" cols="50"></textarea></br>
+
+    <button type="button" onclick="send()">Beküldés</button> 
+
+</form>
+
+
+
+</body>
+</html>
