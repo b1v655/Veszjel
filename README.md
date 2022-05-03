@@ -21,8 +21,8 @@ Katasztrófa helyzetek helyszíni megjelölésére, illetve figyelmeztetések ki
 
 ### operációs rendszer
 
-szerver: Ubuntu 20.04 LTS
-kliens: Android 4.0.3+
+- **szerver:** Ubuntu 20.04 LTS
+- **kliens:** Android 4.0.3+
 
 ### Szerver függőségei
 
