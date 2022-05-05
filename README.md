@@ -92,6 +92,24 @@ A szövegdobozokat az alábbi értelmezésen keresztül kell kitölteni:
 
 ![](Screenshot.png) 
 
+#### Beérkező hibajegyek
+
+A beérkezett hibajegyeket az oldal alján olvashatjuk egy táblázatban. A táblázat bal oszlopában a település jobb oldalán pedig a veszélyhelyzet leírása olvasható.
+
 ### Mobil alkalmazás
+
+A mobil alkalmazás használható Androidon és IOS operációs rendszerrel ellátott eszközön egyaránt. Az alkalmazás a képernyő alján navigálható és lapozható. A három külön álló oldalt az alábbiakban részletezem.
+
+#### Térkép képernyő
+
+Ezen a térképen az alkalmazás jelzi ha egy veszélyhelyzet meghatározott sugarú környezetében, zónájában helyezkedünk el. Ezt felirattal jelzi nekünk. 
+
+#### Hírek képernyő
+
+Ezen az oldalon a felhasználó a diszpécser által kiadott híreket, veszélyhelyzeteket részletesen olvashatja. 
+
+#### Bejelentő oldal
+
+A veszélyhelyzet bejelentésére közvetlenül lehetősége van a felhasználónak, ekkor a képernyőn látható rublikákat kell kitölteni. A kitöltésük kötelező, ha nincs megfelelően kitöltve az applikáció hibát jelez. Küldés esetén a szerver adatbázisában kerül tárolásra a bejelentés.
 
 ![](screens.png) 
