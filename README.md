@@ -90,7 +90,7 @@ A szövegdobozokat az alábbi értelmezésen keresztül kell kitölteni:
  - **Üzenetcím**: A riasztás megnevezése.
  - **Leírás**: A katasztrófa körülményeinek leírása, és lakosság felszólítása cselekvésekre.
 
-![](Screenshot.png) 
+![](images/Screenshot.png) 
 
 #### Beérkező hibajegyek
 
@@ -112,4 +112,4 @@ Ezen az oldalon a felhasználó a diszpécser által kiadott híreket, veszélyh
 
 A veszélyhelyzet bejelentésére közvetlenül lehetősége van a felhasználónak, ekkor a képernyőn látható rublikákat kell kitölteni. A kitöltésük kötelező, ha nincs megfelelően kitöltve az applikáció hibát jelez. Küldés esetén a szerver adatbázisában kerül tárolásra a bejelentés.
 
-![](screens.png) 
+![](images/screens.png) 
