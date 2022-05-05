@@ -91,3 +91,7 @@ A szövegdobozokat az alábbi értelmezésen keresztül kell kitölteni:
  - **Leírás**: A katasztrófa körülményeinek leírása, és lakosság felszólítása cselekvésekre.
 
 ![](Screenshot.png) 
+
+### Mobil alkalmazás
+
+![](screens.png) 
