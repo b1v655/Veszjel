@@ -32,7 +32,7 @@ const ListScreen = ({ navigation}) => {
           </List.Section>
         )}
         {problems.problems.length === 0 && (
-          <Text style={styles.noRunningsTextStyle}>No runnings to display</Text>
+          <Text >Nincs megjeleníthető hír.</Text>
         )}
       </SafeAreaView>
     </ScrollView>

@@ -24,6 +24,18 @@ const server = http.createServer(function(request, response) {
     console.log('GET')
    
     response.writeHead(200, {'Content-Type': 'text/html'})
+    
+    let mydata = fs.readFileSync('./../veszjel_application/components/database/reports.json');
+     let my=JSON.parse(mydata.toString());
+     html+='<table><tr><th>Helység</th><th>Hibajelentés</th></tr>'
+          
+     for (let i=0;i<my.problems.length;i++){
+          html+=
+          '<tr><td>'+my.problems[i].title+'</td>'
+          +'<td>'+my.problems[i].description+'</td></tr>';
+     }
+     html+='</table> </body> </html> ';
+
     response.end(html)
     });
   }

@@ -7,10 +7,6 @@ import {
   CollapseBody,
 } from "accordion-collapse-react-native";
 
-// This component represents a row in the ListScreen
-// danger            -- the current danfger
-// i              -- index of the list
-// navtigation    -- navigation
 
 const ListRow = ({
   danger,
