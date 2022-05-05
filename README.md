@@ -1,4 +1,4 @@
-# Veszély jelző alkalmazás
+# Veszélyjelző alkalmazás
 Katasztrófa és veszélyjelző alkalmazás
 ## Leírás
 
@@ -28,17 +28,17 @@ Katasztrófa helyzetek helyszíni megjelölésére, illetve figyelmeztetések ki
 
 A szerver reactJS nyelven íródott futtatásához az alábbi függőségek telepítése elengedhetetlen.
 
-[nodejs 12+](https://nodejs.org/en/download/)
+- [nodejs 12+](https://nodejs.org/en/download/)
 
-[npm 5.5+](https://docs.npmjs.com/cli/v8/commands/npm-install)
+- [npm 5.5+](https://docs.npmjs.com/cli/v8/commands/npm-install)
 
-[expo-cli](https://docs.expo.dev/get-started/installation/)
+- [expo-cli](https://docs.expo.dev/get-started/installation/)
 
 ### kliens függőségei
 
 Az alkalmazás android operációs rendszerre lett optimalizálva expo go környezetre.
 
-[Expo Go 2.19.6](https://expo.dev/client) 
+- [Expo Go 2.19.6](https://expo.dev/client) 
 
 ### Diszpécser szerver függőségei
 
