@@ -1,4 +1,4 @@
-# Veszély jelző alkalmazás
+# Veszélyjelző alkalmazás
 Katasztrófa és veszélyjelző alkalmazás
 ## Leírás
 
@@ -28,17 +28,17 @@ Katasztrófa helyzetek helyszíni megjelölésére, illetve figyelmeztetések ki
 
 A szerver reactJS nyelven íródott futtatásához az alábbi függőségek telepítése elengedhetetlen.
 
-[nodejs 12+](https://nodejs.org/en/download/)
+- [nodejs 12+](https://nodejs.org/en/download/)
 
-[npm 5.5+](https://docs.npmjs.com/cli/v8/commands/npm-install)
+- [npm 5.5+](https://docs.npmjs.com/cli/v8/commands/npm-install)
 
-[expo-cli](https://docs.expo.dev/get-started/installation/)
+- [expo-cli](https://docs.expo.dev/get-started/installation/)
 
 ### kliens függőségei
 
 Az alkalmazás android operációs rendszerre lett optimalizálva expo go környezetre.
 
-[Expo Go 2.19.6](https://expo.dev/client) 
+- [Expo Go 2.19.6](https://expo.dev/client) 
 
 ### Diszpécser szerver függőségei
 
@@ -91,3 +91,25 @@ A szövegdobozokat az alábbi értelmezésen keresztül kell kitölteni:
  - **Leírás**: A katasztrófa körülményeinek leírása, és lakosság felszólítása cselekvésekre.
 
 ![](Screenshot.png) 
+
+#### Beérkező hibajegyek
+
+A beérkezett hibajegyeket az oldal alján olvashatjuk egy táblázatban. A táblázat bal oszlopában a település jobb oldalán pedig a veszélyhelyzet leírása olvasható.
+
+### Mobil alkalmazás
+
+A mobil alkalmazás használható Androidon és IOS operációs rendszerrel ellátott eszközön egyaránt. Az alkalmazás a képernyő alján navigálható és lapozható. A három külön álló oldalt az alábbiakban részletezem.
+
+#### Térkép képernyő
+
+Ezen a térképen az alkalmazás jelzi ha egy veszélyhelyzet meghatározott sugarú környezetében, zónájában helyezkedünk el. Ezt felirattal jelzi nekünk. 
+
+#### Hírek képernyő
+
+Ezen az oldalon a felhasználó a diszpécser által kiadott híreket, veszélyhelyzeteket részletesen olvashatja. 
+
+#### Bejelentő oldal
+
+A veszélyhelyzet bejelentésére közvetlenül lehetősége van a felhasználónak, ekkor a képernyőn látható rublikákat kell kitölteni. A kitöltésük kötelező, ha nincs megfelelően kitöltve az applikáció hibát jelez. Küldés esetén a szerver adatbázisában kerül tárolásra a bejelentés.
+
+![](screens.png) 
