@@ -1,6 +1,7 @@
 # Veszélyjelző alkalmazás
 
 Készítette: Horváth Milán
+
 Katasztrófa és veszélyjelző alkalmazás, amely az ELTE informatikai karán szoftvertechnológia labor keretében készült.
 
 
