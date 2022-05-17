@@ -1,5 +1,9 @@
 # Veszélyjelző alkalmazás
-Katasztrófa és veszélyjelző alkalmazás
+
+Készítette: Horváth Milán
+Katasztrófa és veszélyjelző alkalmazás, amely az ELTE informatikai karán szoftvertechnológia labor keretében készült.
+
+
 ## Leírás
 
 Katasztrófa helyzetek helyszíni megjelölésére, illetve figyelmeztetések kiadására alkalmas program.
