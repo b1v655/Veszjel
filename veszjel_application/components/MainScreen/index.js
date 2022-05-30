@@ -34,7 +34,11 @@ const MainScreen = () => {
     start();
   });
   const start =  async () => {
-
+    let { status } = await Location.requestPermissionsAsync();
+    if (status !== "granted") {
+      setErrorMsg("Permission to access location was denied");
+      return;
+    }
    let currLocation = await Location.getCurrentPositionAsync(
     LOCATION_SETTINGS
        );

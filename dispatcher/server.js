@@ -6,15 +6,26 @@ const server = http.createServer(function(request, response) {
   if (request.method == 'POST') {
     console.log('POST')
     request.on('data', function(data) {
-      let rawdata = fs.readFileSync('./../veszjel_application/components/database/db.json');
+      let rawdata;
+      if(JSON.parse(data).longitude==null)
+         rawdata= fs.readFileSync('./../veszjel_application/components/database/reports.json');  
+      else
+         rawdata = fs.readFileSync('./../veszjel_application/components/database/db.json');
+      let rd;
       if(rawdata.length>0){
-        rawdata=rawdata.toString().substring(0, rawdata.length - 2);
-        rawdata += ', '+  data + ']}';
+        rawdata=rawdata.toString();
+        rd=rawdata.substring(0, rawdata.length - 2);
+        console.log(rd);
+        rd += ', '+  data + ']}';
       } else 
       {
-          rawdata='{"problems":[' + data + ']}';
+          rd='{"problems":[' + data + ']}';
       }
-      fs.writeFileSync('./../veszjel_application/components/database/db.json', rawdata);
+
+      if(JSON.parse(data).longitude==null)
+        fs.writeFileSync('./../veszjel_application/components/database/reports.json', rd);
+      else
+        fs.writeFileSync('./../veszjel_application/components/database/db.json', rd);
     })
   } else {
     fs.readFile('./app.html', function (err, html) {
@@ -41,6 +52,6 @@ const server = http.createServer(function(request, response) {
   }
 })
 const port = 3000
-const host = '127.0.0.1'
+const host = '192.168.2.103'
 server.listen(port, host)
 console.log(`Listening at http://${host}:${port}`)

@@ -2,6 +2,7 @@ import { ScrollView, View, Text, SafeAreaView, StyleSheet , TextInput} from "rea
 import React from "react";
 import { Button } from "react-native-paper";
 import Dialog from "react-native-dialog";
+import problems from '../database/reports.json';
 
 const ReportScreen = () => {
 
@@ -16,6 +17,19 @@ const ReportScreen = () => {
         onAlert(true);
         return;
       }
+      let newItem= {title:first,description:Second};
+      problems.problems=[...problems.problems,newItem];
+      console.log(problems);
+      
+    
+    fetch('http://192.168.2.103:3000', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newItem)
+    })
       onAlert(false);
   };
 
